@@ -3,7 +3,35 @@
     <ion-title>checkbox</ion-title>
   </ion-toolbar>
 </ion-header>
+<!-- TODO https://ionicframework.com/docs/api/checkbox
+  Interfaces​
+CheckboxChangeEventDetail​
+interface CheckboxChangeEventDetail<T = any> {
+  value: T;
+  checked: boolean;
+}
+CheckboxCustomEvent​
+While not required, this interface can be used in place of the CustomEvent interface for stronger typing with Ionic events emitted from this component.
 
+interface CheckboxCustomEvent<T = any> extends CustomEvent {
+  detail: CheckboxChangeEventDetail<T>;
+  target: HTMLIonCheckboxElement;
+} -->
 <ion-content>
+  <ion-item>
+    <ion-checkbox slot="start"></ion-checkbox>
+    <ion-label>I agree to the terms and conditions</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-checkbox slot="start" [indeterminate]="true"></ion-checkbox>
+    <ion-label>Indeterminate checkbox</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-checkbox slot="start"></ion-checkbox>
+    <ion-label>Themed checkbox</ion-label>
+  </ion-item>
+
 
 </ion-content>

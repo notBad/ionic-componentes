@@ -5,5 +5,129 @@
 </ion-header>
 
 <ion-content>
+  <ion-datetime></ion-datetime>
+  <ion-datetime
+  value="2022-04-21T00:00:00"
+  min="2022-03-01T00:00:00"
+  max="2022-05-31T23:59:59"
+></ion-datetime>
+<ion-datetime
+  minuteValues="0,15,30,45"
+  dayValues="5,10,15,20,25,30"
+></ion-datetime>
+<ion-datetime [isDateEnabled]="isWeekday"></ion-datetime>
+<ion-datetime locale="en-US"></ion-datetime>
+<ion-datetime locale="en-GB" hourCycle="h12"></ion-datetime>
+<ion-datetime [firstDayOfWeek]="1"></ion-datetime>
+<ion-datetime locale="es-ES">
+  <span slot="time-label">Tiempo</span>
+</ion-datetime>
+<ion-datetime locale="en-GB-u-hc-h12"></ion-datetime>
+<ion-datetime presentation="month-year"></ion-datetime>
+<ion-datetime presentation="time"></ion-datetime>
+<ion-datetime presentation="date"></ion-datetime>
+<ion-datetime presentation="date-time" [preferWheel]="true"></ion-datetime>
+<ion-datetime
+  presentation="date"
+  [multiple]="true"
+  [value]="['2022-06-03', '2022-06-13', '2022-06-29']"
+></ion-datetime>
+<ion-datetime [showDefaultTitle]="true"></ion-datetime>
+<ion-datetime>
+  <span slot="title">Select a Reservation Date</span>
+</ion-datetime>
+<ion-datetime [showDefaultButtons]="true"></ion-datetime>
+<ion-datetime
+  [showDefaultButtons]="true"
+  doneText="All set"
+  cancelText="Never mind"
+>
+</ion-datetime>
+<ion-datetime #datetime>
+  <ion-buttons slot="buttons">
+    <ion-button color="danger" (click)="datetime.reset()">Reset</ion-button>
+    <ion-button color="primary" (click)="datetime.cancel()">Never mind</ion-button>
+    <ion-button color="primary" (click)="datetime.confirm()">All Set</ion-button>
+  </ion-buttons>
+</ion-datetime>
 
+<ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+<ion-modal [keepContentsMounted]="true">
+  <ng-template>
+    <ion-datetime id="datetime"></ion-datetime>
+  </ng-template>
+</ion-modal>
+
+<ion-button (click)="openPicker()">Open</ion-button>
+<!-- TODO otros picker en https://ionicframework.com/docs/api/picker -->
+
+<ion-datetime color="rose"></ion-datetime>
+
+<!-- TODOcodigo tipo datetime https://ionicframework.com/docs/api/datetime -->
+<!-- TODO en global.css
+/* Core CSS required for Ionic components to work properly */
+@import '~@ionic/angular/css/core.css';
+
+/* Basic CSS for apps built with Ionic */
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+:root {
+  --ion-color-rose: #831843;
+  --ion-color-rose-rgb: 131, 24, 67;
+  --ion-color-rose-contrast: #ffffff;
+  --ion-color-rose-contrast-rgb: 255, 255, 255;
+  --ion-color-rose-shade: #73153b;
+  --ion-color-rose-tint: #8f2f56;
+
+  --ion-text-color: #881337;
+  --ion-text-color-rgb: 136, 19, 55;
+
+  --ion-color-step-50: #f9e6e9;
+  --ion-color-step-100: #f3dbdf;
+  --ion-color-step-150: #edd0d6;
+  --ion-color-step-200: #e7c5cd;
+  --ion-color-step-250: #e1bac3;
+  --ion-color-step-300: #dbaeba;
+  --ion-color-step-350: #d5a3b1;
+  --ion-color-step-400: #cf98a7;
+  --ion-color-step-450: #c98d9e;
+  --ion-color-step-500: #c48295;
+  --ion-color-step-550: #be778b;
+  --ion-color-step-600: #b86c82;
+  --ion-color-step-650: #b26178;
+  --ion-color-step-700: #ac566f;
+  --ion-color-step-750: #a64b66;
+  --ion-color-step-800: #a03f5c;
+  --ion-color-step-850: #9a3453;
+  --ion-color-step-900: #94294a;
+  --ion-color-step-950: #8e1e40;
+}
+
+.ion-color-rose {
+  --ion-color-base: var(--ion-color-rose);
+  --ion-color-base-rgb: var(--ion-color-rose-rgb);
+  --ion-color-contrast: var(--ion-color-rose-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-rose-contrast-rgb);
+  --ion-color-shade: var(--ion-color-rose-shade);
+  --ion-color-tint: var(--ion-color-rose-tint);
+}
+
+ion-datetime {
+  --background: #fff1f2;
+  --background-rgb: 255, 241, 242;
+
+  border-radius: 16px;
+  box-shadow: rgba(var(--ion-color-rose-rgb), 0.3) 0px 10px 15px -3px;
+} -->
 </ion-content>
