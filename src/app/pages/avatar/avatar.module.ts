@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ListPageRoutingModule } from './list-routing.module';
+import { AvatarPageRoutingModule } from './avatar-routing.module';
 
-import { ListPage } from './list.page';
+import { AvatarPage } from './avatar.page';
 import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
@@ -14,9 +14,8 @@ import { ComponentsModule } from '../../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    ListPageRoutingModule,
-    ComponentsModule
+    AvatarPageRoutingModule
   ],
-  declarations: [ListPage]
+  declarations: [AvatarPage]
 })
-export class ListPageModule {}
+export class AvatarPageModule {}

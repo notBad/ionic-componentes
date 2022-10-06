@@ -1,0 +1,45 @@
+<!-- <app-header titulo="button"></app-header>
+ -->
+ <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+      defaultHref="/">
+      </ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-capitalize">Avatar</ion-title>
+    <ion-buttons slot="end">
+    <ion-avatar>
+      <img alt="perfil" src="/assets/stan-lee.jpg" />
+    </ion-avatar>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-chip color="primary" outline="true" *ngFor="let item of [1,1,1,1]">
+    <ion-avatar>
+      <img alt="perfil" src="/assets/stan-lee.jpg" />
+    </ion-avatar>
+    <ion-label>Chip Avatar</ion-label>
+  </ion-chip>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img alt="perfil" src="/assets/stan-lee.jpg" />
+    </ion-avatar>
+    <ion-label>Item Avatar</ion-label>
+  </ion-item>
+
+  <ion-avatar class="radiocustom">
+    <img alt="perfil" src="/assets/stan-lee.jpg" />
+  </ion-avatar>
+  <!-- para evitar sobrecarga innecesaria utilizaremos <ion-img> en vez de <img>
+    si la imagen no se tiene que cargar directamente sino dependiendo de alguna
+     condición (bajo demanda). -->
+  <ion-avatar>
+    <ion-img alt="perfil" src="/assets/stan-lee.jpg"></ion-img>
+  </ion-avatar>
+
+</ion-content>

@@ -167,6 +167,10 @@ const routes: Routes = [
     path: 'typography',
     loadChildren: () => import('./pages/typography/typography.module').then( m => m.TypographyPageModule)
   },
+  {
+    path: 'avatar',
+    loadChildren: () => import('./pages/avatar/avatar.module').then( m => m.AvatarPageModule)
+  },
 
 ];
 

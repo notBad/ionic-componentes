@@ -4,6 +4,46 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<!-- TODO
+<ion-content scroll-y="false">
+  <virtual-scroll-element class="ion-content-scroll-host">
+
+  </virtual-scroll-element>
+  <ion-infinite-scroll>
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+ -->
+
+ <ion-content role="feed">
+  <ion-list>
+    <ion-item role="article">
+      First item
+    </ion-item>
+    <ion-item role="article">
+      Second item
+    </ion-item>
+    ...
+  </ion-list>
+
+  <ion-infinite-scroll>
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 
 </ion-content>
+
+<!-- TODO
+  <ion-content>
+  <ion-button (click)="toggleInfiniteScroll()" expand="block">
+    Toggle Infinite Scroll
+  </ion-button>
+
+  <ion-list></ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content> -->

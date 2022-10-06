@@ -1,9 +1,403 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>item</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="item"></app-header>
 
 <ion-content>
+<h1>Veremos más adelante ejemplos con programación</h1>
 
+<div class="uno">
+  <ion-item>
+    <ion-label>Basic Item</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      Multi-line text that should ellipsis when it is too long
+      to fit on one line. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit.
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="ion-text-wrap">
+      Multi-line text that should wrap when it is too long
+      to fit on one line. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit.
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <h1>H1 Heading</h1>
+      <p>Paragraph</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <h2>H2 Heading</h2>
+      <p>Paragraph</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <h3>H3 Heading</h3>
+      <p>Paragraph</p>
+    </ion-label>
+  </ion-item>
+</div>
+<!-- items pulsables -->
+<div class="dos">
+  <ion-item href="#">
+    <ion-label>Anchor Item</ion-label>
+  </ion-item>
+
+  <ion-item href="#" disabled="true">
+    <ion-label>Disabled Anchor Item</ion-label>
+  </ion-item>
+
+  <ion-item button>
+    <ion-label>Button Item</ion-label>
+  </ion-item>
+
+  <ion-item button disabled="true">
+    <ion-label>Disabled Button Item</ion-label>
+  </ion-item>
+</div>
+<!-- item pulsables con flecha -->
+<div class="tres">
+  <ion-item detail="true">
+    <ion-label>
+      <h3>Text Item</h3>
+      <p>Detail set to true - detail arrow displays on both modes</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item button>
+    <ion-label>
+      <h3>Button Item</h3>
+      <p>Default detail - detail arrow displays on iOS only</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item button detail="true">
+    <ion-label>
+      <h3>Button Item</h3>
+      <p>Detail set to true - detail arrow displays on both modes</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item button detail="false">
+    <ion-label>
+      <h3>Button Item</h3>
+      <p>Detail set to false - detail arrow hidden on both modes</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item button detail="true" detail-icon="caret-forward-outline">
+    <ion-label>
+      <h3>Button Item</h3>
+      <p>Detail set to true - detail arrow displays on both modes</p>
+      <p>Detail icon set to caret-forward-outline</p>
+    </ion-label>
+  </ion-item>
+</div>
+<!-- lineas -->
+<div class="cuatro">
+  <ion-item>
+    <ion-label>
+      Default Item Lines
+    </ion-label>
+  </ion-item>
+
+  <ion-item lines="inset">
+    <ion-label>Item Lines Inset</ion-label>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label>Item Lines Full</ion-label>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label>Item Lines None</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="star" slot="start"></ion-icon>
+    <ion-label>Default Item Lines</ion-label>
+    <ion-icon name="information-circle" slot="end"></ion-icon>
+  </ion-item>
+
+  <ion-item lines="inset">
+    <ion-icon name="star" slot="start"></ion-icon>
+    <ion-label>Item Lines Inset</ion-label>
+    <ion-icon name="information-circle" slot="end"></ion-icon>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-icon name="star" slot="start"></ion-icon>
+    <ion-label>Item Lines Full</ion-label>
+    <ion-icon name="information-circle" slot="end"></ion-icon>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-icon name="star" slot="start"></ion-icon>
+    <ion-label>Item Lines None</ion-label>
+    <ion-icon name="information-circle" slot="end"></ion-icon>
+  </ion-item>
+</div>
+<!-- media items -->
+<div class="cinco">
+  <ion-item>
+    <ion-avatar slot="start">
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+    <ion-label>
+      Avatar Item
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-thumbnail slot="start">
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+    </ion-thumbnail>
+    <ion-label>
+      Thumbnail Item
+    </ion-label>
+  </ion-item>
+</div>
+<!-- botones -->
+<div class="seis">
+  <ion-item>
+    <ion-button slot="start">
+      Start
+    </ion-button>
+    <ion-label>Default Buttons</ion-label>
+    <ion-button slot="end">
+      End
+    </ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-button slot="start">
+      Start
+      <ion-icon name="home" slot="end"></ion-icon>
+    </ion-button>
+    <ion-label>Buttons with Icons</ion-label>
+    <ion-button slot="end">
+      <ion-icon name="star" slot="end"></ion-icon>
+      End
+    </ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-button slot="start">
+      <ion-icon slot="icon-only" name="navigate"></ion-icon>
+    </ion-button>
+    <ion-label>Icon only Buttons</ion-label>
+    <ion-button slot="end">
+      <ion-icon slot="icon-only" name="star"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Button Sizes</ion-label>
+    <ion-button slot="end" size="small">
+      Small
+    </ion-button>
+    <ion-button slot="end" size="default">
+      Default
+    </ion-button>
+    <ion-button slot="end" size="large">
+      Large
+    </ion-button>
+  </ion-item>
+</div>
+<!-- iconos -->
+<div class="siete">
+  <ion-item>
+    <ion-label>
+      Default Icon
+    </ion-label>
+    <ion-icon name="information-circle" slot="end"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      Large Icon
+    </ion-label>
+    <ion-icon name="information-circle" size="large" slot="end"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      Small Icon
+    </ion-label>
+    <ion-icon name="information-circle" size="small" slot="end"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="star" slot="start"></ion-icon>
+    <ion-label>
+      Default Icon
+    </ion-label>
+  </ion-item>
+</div>
+<!-- entrada de datos -->
+<div class="ocho">
+  <ion-item>
+    <ion-label>Default Input</ion-label>
+    <ion-input placeholder="Enter text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Fixed Input</ion-label>
+    <ion-input placeholder="Enter text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Stacked Input</ion-label>
+    <ion-input placeholder="Enter text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Floating Input</ion-label>
+    <ion-input placeholder="Enter text"></ion-input>
+  </ion-item>
+
+  <ion-item fill="outline">
+    <ion-label position="floating">Floating Input: Outline (MD only)</ion-label>
+    <ion-input placeholder="Enter text"></ion-input>
+  </ion-item>
+
+  <ion-item fill="solid">
+    <ion-label position="floating">Floating Input: Solid (MD only)</ion-label>
+    <ion-input placeholder="Enter text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Select</ion-label>
+    <ion-select placeholder="Make a Selection">
+      <ion-select-option value="">No Game Console</ion-select-option>
+      <ion-select-option value="nes">NES</ion-select-option>
+      <ion-select-option value="n64">Nintendo64</ion-select-option>
+      <ion-select-option value="ps">PlayStation</ion-select-option>
+      <ion-select-option value="genesis">Sega Genesis</ion-select-option>
+      <ion-select-option value="saturn">Sega Saturn</ion-select-option>
+      <ion-select-option value="snes">SNES</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Toggle</ion-label>
+    <ion-toggle slot="end"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Checkbox</ion-label>
+    <ion-checkbox slot="end"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Range</ion-label>
+    <ion-range></ion-range>
+  </ion-item>
+</div>
+<div class="nueve">
+  <ion-item fill="solid">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="email" ngModel email></ion-input>
+    <ion-note slot="helper">Enter a valid email</ion-note>
+    <ion-note slot="error">Invalid email</ion-note>
+  </ion-item>
+</div>
+<div class="diez">
+<!--   TODO EJEMPLO CONTADOR
+  <ion-item counter="true">
+    <ion-label position="floating">Default Counter</ion-label>
+    <ion-input maxlength="20"></ion-input>
+  </ion-item>
+
+  <ion-item id="custom-item" counter="true" [counterFormatter]="customCounterFormatter">
+    <ion-label position="floating">Custom Counter Format</ion-label>
+    <ion-input maxlength="20"></ion-input>
+  </ion-item>
+
+  <script>import { Component } from '@angular/core';
+
+    @Component({
+      selector: 'app-example',
+      templateUrl: 'example.component.html',
+    })
+    export class ExampleComponent {
+      customCounterFormatter(inputLength: number, maxLength: number) {
+        return `${maxLength - inputLength} characters remaining`;
+      }
+    }</script>
+ -->
+
+</div>
+<div class="once">
+  <ion-item>
+    <ion-label>Default Item</ion-label>
+  </ion-item>
+  <ion-item color="primary">
+    <ion-label>Primary Item</ion-label>
+  </ion-item>
+  <ion-item color="secondary">
+    <ion-label>Secondary Item</ion-label>
+  </ion-item>
+  <ion-item color="tertiary">
+    <ion-label>Tertiary Item</ion-label>
+  </ion-item>
+  <ion-item color="success">
+    <ion-label>Success Item</ion-label>
+  </ion-item>
+  <ion-item color="warning">
+    <ion-label>Warning Item</ion-label>
+  </ion-item>
+  <ion-item color="danger">
+    <ion-label>Danger Item</ion-label>
+  </ion-item>
+  <ion-item color="light">
+    <ion-label>Light Item</ion-label>
+  </ion-item>
+  <ion-item color="medium">
+    <ion-label>Medium Item</ion-label>
+  </ion-item>
+  <ion-item color="dark">
+    <ion-label>Dark Item</ion-label>
+  </ion-item>
+</div>
+
+<div class="doce">
+  <ion-item button detail lines="full">
+    <ion-label>Custom Item</ion-label>
+  </ion-item>
+
+  <ion-item button detail lines="full">
+    <ion-label>Custom Item</ion-label>
+  </ion-item>
+
+  <ion-item button detail lines="full">
+    <ion-label>Custom Item</ion-label>
+  </ion-item>
+
+ <!-- TODO STYLE en CCS
+   <style>ion-item::part(native) {
+    background: #19422d;
+    color: #fff;
+
+    border-color: #fff;
+    border-style: dashed;
+    border-width: 2px;
+
+    border-radius: 20px;
+  }
+
+  ion-item::part(detail-icon) {
+    color: white;
+    opacity: 1;
+    font-size: 20px;
+  }</style> -->
+</div>
 </ion-content>
