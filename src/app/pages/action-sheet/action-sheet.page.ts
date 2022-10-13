@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';
+import { ActionSheetController } from '@ionic/angular'; //importado
 
 @Component({
   selector: 'app-action-sheet',
@@ -10,7 +10,7 @@ export class ActionSheetPage implements OnInit {
 
   result: string;
   //inyectado servicio
-  constructor(private actionSheetCtrl: ActionSheetController) {}
+  constructor(private actionSheetCtrl: ActionSheetController) {} //necesario para importar
 
   ngOnInit() {
   }
