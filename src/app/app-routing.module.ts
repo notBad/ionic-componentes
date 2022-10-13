@@ -171,6 +171,14 @@ const routes: Routes = [
     path: 'avatar',
     loadChildren: () => import('./pages/avatar/avatar.module').then( m => m.AvatarPageModule)
   },
+  {
+    path: 'alertas',
+    loadChildren: () => import('./pages/alertas/alertas.module').then( m => m.AlertasPageModule)
+  },
+  {
+    path: 'acciones',
+    loadChildren: () => import('./pages/acciones/acciones.module').then( m => m.AccionesPageModule)
+  },
 
 ];
 
