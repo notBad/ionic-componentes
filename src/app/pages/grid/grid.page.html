@@ -1,7 +1,9 @@
 <app-header titulo="grid"></app-header>
-
+<!-- si no se dice nada, las columnas se reparten a partes iguales el espacio -->
 <ion-content>
-  <ion-grid>
+  <!-- fixed ocupa todo el ancho de la pantalla en todo caso
+    si está a true independientemente del ancho responsive de las últimas filas de este ejemplo -->
+  <ion-grid fixed="true">
     <ion-row>
       <ion-col>
         ion-col
@@ -16,7 +18,8 @@
         ion-col
       </ion-col>
     </ion-row>
-
+<!-- en este ejemplo la primera columna se quedará con la mitad del espacio (6)
+  y el ressto se repartirá proporcionalmente -->
     <ion-row>
       <ion-col size="6">
         ion-col [size="6"]
@@ -40,7 +43,7 @@
         ion-col [size="3"]
       </ion-col>
     </ion-row>
-
+<!-- con offset dejamos un espacio en blanco antes del tamaño indicado -->
     <ion-row>
       <ion-col size="3">
         ion-col [size="3"]
@@ -87,7 +90,7 @@
         <br>#
       </ion-col>
     </ion-row>
-
+<!-- difiere de align-self en que se aplica a toda la fila -->
     <ion-row class="ion-align-items-start">
       <ion-col>
         [start] ion-col
@@ -138,7 +141,10 @@
         <br>#
       </ion-col>
     </ion-row>
-
+<!-- size-sm y size-md .. cambiarán su comportamiento según
+  el ancho de la pantalla convirtiendose al ancho de columnas indicado -->
+<!-- https://ionicframework.com/docs/layout/grid#grid-size
+  para ir directamente a las dimensiones que se pueden controlar -->
     <ion-row>
       <ion-col size="12" size-sm>
         ion-col [size="12"] [size-sm]
@@ -155,17 +161,17 @@
     </ion-row>
 
     <ion-row>
-      <ion-col size="12" size-md>
-        ion-col [size="12"] [size-md]
+      <ion-col size="12" size-md="3" size-sm="6">
+        ion-col size="12" size-md="3" size-sm="6"
       </ion-col>
-      <ion-col size="12" size-md>
-        ion-col [size="12"] [size-md]
+      <ion-col size="12" size-md="3" size-sm="6">
+        ion-col size="12" size-md="3" size-sm="6"
       </ion-col>
-      <ion-col size="12" size-md>
-        ion-col [size="12"] [size-md]
+      <ion-col size="12" size-md="3" size-sm="6">
+        ion-col size="12" size-md="3" size-sm="6"
       </ion-col>
-      <ion-col size="12" size-md>
-        ion-col [size="12"] [size-md]
+      <ion-col size="12" size-md="3"  size-sm="6">
+        ion-col size="12" size-md="3" size-sm="6"
       </ion-col>
     </ion-row>
 

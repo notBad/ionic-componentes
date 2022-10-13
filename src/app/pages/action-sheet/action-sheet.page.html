@@ -10,7 +10,11 @@
 <!-- TODO https://ionicframework.com/docs/api/action-sheet -->
 <ion-content>
   <div class="container">
-    <ion-button (click)="presentActionSheet()">Open</ion-button>
-    <code *ngIf="result"> {{ result }} </code>
+<!--    <ion-button (click)="presentActionSheet()">Mostrar Action Sheet</ion-button>
+  <code *ngIf="result"> {{ result }} </code> -->
+ <ion-button (click)="onClick()" expand="block">
+  Ejemplo Action Sheet
+ </ion-button>
+
   </div>
 </ion-content>
