@@ -1,6 +1,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Componentes</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <!-- usando la etiqueta routerLink con / y el nombre que aparece en el achivo app-routing.module.ts-->
