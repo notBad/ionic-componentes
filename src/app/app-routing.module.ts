@@ -179,6 +179,10 @@ const routes: Routes = [
     path: 'acciones',
     loadChildren: () => import('./pages/acciones/acciones.module').then( m => m.AccionesPageModule)
   },
+  {
+    path: 'fab',
+    loadChildren: () => import('./pages/fab/fab.module').then( m => m.FabPageModule)
+  },
 
 ];
 
