@@ -1,9 +1,168 @@
-<ion-header>
+<app-header titulo="toolbar"></app-header>
+<!-- <ion-header>
   <ion-toolbar>
-    <ion-title>toolbar</ion-title>
+    <ion-title>Toolbar</ion-title>
   </ion-toolbar>
 </ion-header>
-
+ -->
 <ion-content>
+  <!-- Botones en la toolbar-->
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        Start
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Start / End Buttons</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        End
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        Secondary
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        Primary
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Primary / Secondary Buttons</ion-title>
+  </ion-toolbar>
+  <!-- ejemplo primary (la mas a la derecha)
+  y secuondary que puede tener comportamiento diferente en ios pero en principio
+  sale a la izquierda de primary-->
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Icon Buttons</ion-title>
+  </ion-toolbar>
+  <!-- solid -->
+  <!-- botones solid-->
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button fill="solid">
+        <ion-icon slot="start" name="person-circle">
+        </ion-icon>
+        Contact
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Botones solids</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button fill="solid" color="secondary">
+        Help
+        <ion-icon slot="start" name="person-circle">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <!-- botones outline -->
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button fill="outline">
+        <ion-icon slot="start" name="star"></ion-icon>
+        Star
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button fill="outline">
+        Edit
+        <ion-icon slot="end" name="create"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Outline Buttons</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Back Button</ion-title>
+  </ion-toolbar>
+
+  <!-- ocultar o mostrar el botón -->
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Menu Button</ion-title>
+  </ion-toolbar>
+
+  <!-- barra de búsqueda en la toolbar
+Se puede colocar una barra de búsqueda dentro
+de una barra de herramientas para buscar en el
+contenido. Debe ser el único componente secundario
+de la barra de herramientas y ocupará todo el
+ancho y alto.
+-->
+
+  <ion-toolbar>
+    <ion-title>Toolbar</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
+  <!-- segment en toolbar -->
+  <ion-toolbar>
+    <ion-segment value="all">
+      <ion-segment-button value="all">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        Favorites
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+
+  <!-- progress bar
+   -->
+  <ion-toolbar>
+    <ion-title>barra de progreso</ion-title>
+    <ion-progress-bar type="indeterminate"></ion-progress-bar>
+  </ion-toolbar>
+
+  <!-- colores -->
+  <ion-toolbar color="dark">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="danger">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Toolbar dark</ion-title>
+  </ion-toolbar>
+
+
+  <!-- en la documentación hay ejemplo ionteresante de custom -->
 
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Toolbar</ion-title>
+  </ion-toolbar>
+</ion-footer>
